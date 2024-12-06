@@ -1,23 +1,23 @@
-import { initializeApp } from 'firebase/app';
-import { getAuth, initializeAuth, getReactNativePersistence } from 'firebase/auth';
-import AsyncStorage from '@react-native-async-storage/async-storage'; // Import AsyncStorage
+//
+import firebase from 'firebase/compat/app';
+import 'firebase/compat/auth';
+import 'firebase/compat/firestore'; 
+import 'firebase/compat/functions';
 
-// Your Firebase configuration object
 const firebaseConfig = {
-    apiKey: 'AIzaSyCsv3CsVJL4ri6Gz6I3UiCfxatoYVWoxbw',
-    authDomain: 'thesis-ad543.firebaseapp.com',
-    projectId: 'thesis-ad543',
-    storageBucket: 'thesis-ad543.appspot.com', 
-    messagingSenderId: '1836074086378738059',
-    appId: '1:885904173811:android:ef336df3417631e854a586',
+  apiKey: "AIzaSyBPrqDFvjpeA27TX5torMOdo8P3hHFtZek",
+  authDomain: "thesis-ad543.firebaseapp.com",
+  projectId: "thesis-ad543",
+  storageBucket: "thesis-ad543.firebasestorage.app",
+  messagingSenderId: "885904173811",
+  appId: "1:885904173811:web:dd9d0c9787558da754a586",
+  measurementId: "G-4KMCGFD3XN"
 };
 
-// Initialize Firebase app
-const app = initializeApp(firebaseConfig);
+if (!firebase.apps.length) {
+  firebase.initializeApp(firebaseConfig);
+}
 
-// Initialize Firebase Auth with AsyncStorage for persistence
-const auth = initializeAuth(app, {
-  persistence: getReactNativePersistence(AsyncStorage), // Use AsyncStorage to persist auth state
-});
-
-export { auth };
+export const auth = firebase.auth();
+export const db = firebase.firestore();
+export default firebase;
