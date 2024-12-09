@@ -12,9 +12,9 @@ export default function Home(): JSX.Element {
       
     
       <View style={styles.horizontalButtons}>
-        <Button title="Welcome" onPress={() => router.push('./welcome')} />
-        <Button title="Home" onPress={() => router.push('./home')} />
-        <Button title="Request" onPress={() => router.push('./request')} />
+        <Button title="ADD FACULTY" onPress={() => router.push('./buttons/faculty')} />
+        <Button title="ADD STUDENT" onPress={() => router.push('./buttons/student')} />
+        <Button title="FACULTY RATINGS" onPress={() => router.push('./buttons/rating')} />
       </View>
     </View>
   );
@@ -33,7 +33,7 @@ const styles = StyleSheet.create({
     marginBottom: 20,
   },
   horizontalButtons: {
-    flexDirection: 'row',
+    flexDirection: 'column',
     justifyContent: 'space-between',
     marginVertical: 20,
     width: '80%',

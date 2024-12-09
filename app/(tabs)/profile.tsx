@@ -1,11 +1,11 @@
-// app/(tabs)/about.tsx
+// app/(tabs)/index.tsx
 import React from 'react';
 import { View, Text } from 'react-native';
 
-export default function AboutTab() {
+export default function ProfileTab() {
   return (
     <View>
-      <Text>About Tab Screen</Text>
+      <Text>Profile Tab Screen</Text>
     </View>
   );
 }

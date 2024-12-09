@@ -11,7 +11,7 @@ export default function Layout() {
     const unsubscribe = auth.onAuthStateChanged((user) => {
       if (user) {
         setIsAuthenticated(true);
-        router.replace('./welcome'); // If authenticated, go to the welcome screen
+        router.replace('/(tabs)/home'); // If authenticated, go to the welcome screen
       } else {
         setIsAuthenticated(false);
         router.replace('/login'); // If not authenticated, go to login
@@ -23,7 +23,6 @@ export default function Layout() {
   return (
     <Stack>
       <Stack.Screen name="login" options={{ title: "Login" }} />
-      <Stack.Screen name="(tabs)" options={{ title: "Tabs" }} />
     </Stack>
   );
 }

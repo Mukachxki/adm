@@ -2,10 +2,10 @@
 import React from 'react';
 import { View, Text } from 'react-native';
 
-export default function HomeTab() {
+export default function ListTab() {
   return (
     <View>
-      <Text>Home Tab Screen</Text>
+      <Text>List Tab Screen</Text>
     </View>
   );
 }
